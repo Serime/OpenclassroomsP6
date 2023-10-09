@@ -1,0 +1,56 @@
+.Dropdown {
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  button {
+    background-color: #FF6060;
+    height: 52px;
+    width: 100%;
+    font-size: 24px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .arrow {
+      position: relative;
+      transition-duration: 0.7s;
+    }      
+  }
+  .content {
+    padding: 0 15px;
+    color: #FF6060;
+    font-size: 18px;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s;
+  }
+  .active + .content {
+    max-height: 150px;
+  }  
+  .active .arrow {
+    transform: rotate(-180deg);    
+  }
+}
+
+@media (max-width: 1200px) {
+  .Dropdown {  
+      button {
+        height: 30px;
+        font-size: 13px;
+        .arrow {
+          height: 10px;
+        }    
+      }
+      .content {
+        font-size: 12px;
+      }
+  }
+}
+
+
