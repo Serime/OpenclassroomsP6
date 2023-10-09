@@ -1,0 +1,43 @@
+.Card {
+  height: 340px;
+  width: 340px;
+  .gradient {    
+    position: absolute;
+    height: 340px;
+    width: 340px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 25px;
+  }
+  span {  
+    position: absolute;
+    height: 340px;
+    width: 340px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  img {
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1200px) {
+  .Card {  
+    height: 335px;
+    width: 100%;
+    .gradient {
+      height: 335px;
+      width: calc(100% - 40px);
+    }
+    img {
+      height: 335px;
+      width: 100%;
+    }
+  }
+}

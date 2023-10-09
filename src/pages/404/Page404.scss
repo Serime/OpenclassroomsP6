@@ -1,4 +1,4 @@
-main {
+.Page404 {
   color: #FF6060;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ main {
 }
 
 @media (max-width: 1200px) {
-  main {    
+  .Page404 {    
     gap: 113px;
     padding: 113px 0px;
     span {
