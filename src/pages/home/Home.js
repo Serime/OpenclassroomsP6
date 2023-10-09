@@ -1,4 +1,3 @@
-import logo_colored from './../../logo_colored.svg';
 import './Home.scss';
 
 function App() {
