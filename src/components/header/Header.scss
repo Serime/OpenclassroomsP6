@@ -1,0 +1,38 @@
+header {
+  color: #FF6060;
+
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 68px;
+  padding: 45px 100px 0px 100px;
+  nav {
+    display: flex;
+    gap: 57px;
+    a {
+      text-decoration: none;
+      color: #FF6060;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    font-size: 12px;
+    padding: 20px 20px 0px 20px;
+    img {
+      width: 145px;
+    }
+    nav {
+      gap: 26px;
+      a {
+        text-transform: Uppercase;
+        
+      }
+    }
+  }
+}
