@@ -5,7 +5,7 @@ import './Header.scss';
 function Header() {
   return (
     <header>
-      <img src={logo_colored} height={68} width={210} alt="Kasa" />
+      <img src={logo_colored} height={68} width={210} alt="Kasa"/>
       <nav>
         <Link to="/">Accueil</Link>
         <Link to="/About">A Propos</Link>

@@ -1,5 +1,6 @@
+$base-color: #FF6060;
 .Page404 {
-  color: #FF6060;
+  color: $base-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +18,7 @@
   }
   a {
     font-size: 18px;
-    color: #FF6060;
+    color: $base-color;
     text-decoration: underline;
     height: 26px;
   }

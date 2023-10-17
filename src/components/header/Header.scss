@@ -1,6 +1,6 @@
+$base-color: #FF6060;
 header {
-  color: #FF6060;
-
+  color: $base-color;
   font-size: 24px;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,7 @@ header {
     gap: 57px;
     a {
       text-decoration: none;
-      color: #FF6060;
+      color: $base-color;
       &:hover {
         text-decoration: underline;
       }
@@ -31,7 +31,6 @@ header {
       gap: 26px;
       a {
         text-transform: Uppercase;
-        
       }
     }
   }

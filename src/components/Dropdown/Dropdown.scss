@@ -1,7 +1,8 @@
+$base-color: #FF6060;
 .Dropdown {    
   border-radius: 5px;  
   button {
-    background-color: #FF6060;
+    background-color: $base-color;
     height: 52px;
     width: 100%;
     font-size: 24px;
@@ -22,7 +23,7 @@
   }
   .content {
     background-color: #F6F6F6;
-    color: #FF6060;
+    color: $base-color;
     padding: 0 15px;
     font-size: 18px;    
     max-height: 0;
