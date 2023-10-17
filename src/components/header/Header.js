@@ -1,4 +1,5 @@
 import logo_colored from './../../logo_colored.svg';
+import { Link } from 'react-router-dom'
 import './Header.scss';
 
 function Header() {
@@ -6,8 +7,8 @@ function Header() {
     <header>
       <img src={logo_colored} height={68} width={210} alt="Kasa" />
       <nav>
-        <a href='/'>Accueil</a>
-        <a href='/About'>A Propos</a>
+        <Link to="/">Accueil</Link>
+        <Link to="/About">A Propos</Link>
       </nav>
     </header>
   );

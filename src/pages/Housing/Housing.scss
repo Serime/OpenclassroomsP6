@@ -1,0 +1,227 @@
+.Housing {
+    .alice-carousel {
+        margin-top: 50px;
+        .Slide { 
+            height: 415px;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+            span {
+                height: 100%;
+                width: 100%;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                position: absolute;
+                bottom: 24px;
+                font-size: 18px;
+            }        
+        } 
+        .alice-carousel__next-btn {    
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            top: 0px;      
+            right: 0px;
+            .alice-carousel__next-btn-wrapper {
+                padding-right: 24px;
+                .alice-carousel__next-btn-item {
+                    border: solid white;
+                    width: 0;
+                    height: 0;                
+                    border-width: 0 14px 14px 0;
+                    display: inline-block;
+                    padding: 30px;
+                    transform: rotate(-45deg);
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .alice-carousel__prev-btn {    
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+            top: 0px;  
+            .alice-carousel__prev-btn-wrapper {
+                padding-left: 24px;
+                .alice-carousel__prev-btn-item {
+                    border: solid white;
+                    width: 0;
+                    height: 0;
+                    border-width: 0 14px 14px 0;
+                    display: inline-block;
+                    padding: 30px;
+                    transform: rotate(135deg);
+                    span {
+                        display: none;
+                    }
+                }
+            } 
+        }
+    }   
+    .Housing_Info_1 {
+        display: flex;
+        justify-content: space-between;        
+        .Title_Location_Tags {
+            display: flex;
+            flex-direction: column;
+            padding-top: 30px;
+            gap: 20px;
+            h1 {
+                font-size: 36px;
+                color: #FF6060;
+                font-weight: 500;
+                margin: 0;
+            }
+            span {
+                font-size: 18px;
+                color: #FF6060;
+            }
+            .Tags {
+                display: flex;
+                gap: 10px;
+                .Tag {
+                    background-color: #FF6060;
+                    color: white;
+                    border-radius: 10px;
+                    min-width: 115px;
+                    height: 25px;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 20px;
+                }
+            }
+            
+        }
+        .Host_Rating {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 21px;
+            padding-top: 20px;
+            .Host {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                span {
+                    width: min-content;
+                    text-align: end;
+                    color: #FF6060;
+                    font-size: 18px;
+                }
+                img {
+                    border-radius: 100%;
+                }            
+            }        
+            .Rating {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }    
+    .Dropdowns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 76px;
+        padding-top: 24px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .Housing {  
+        .alice-carousel {
+            margin-top: 27px;
+            .Slide { 
+                height: 335px;    
+            }
+            .alice-carousel__next-btn {    
+                .alice-carousel__next-btn-wrapper {
+                    padding-right: 4px;
+                    .alice-carousel__next-btn-item {
+                        padding: 10px;
+                        border-width: 0 4px 4px 0;
+                    }
+                }
+            }
+            .alice-carousel__prev-btn {    
+                .alice-carousel__prev-btn-wrapper {
+                    padding-left: 4px;
+                    .alice-carousel__prev-btn-item {
+                        padding: 10px;
+                        border-width: 0 4px 4px 0;
+                    }
+                }
+            }
+        }
+        .Housing_Info_1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;        
+            .Title_Location_Tags {
+                display: flex;
+                flex-direction: column;
+                padding-top: 30px;
+                gap: 20px;
+                h1 {
+                    font-size: 18px;
+                }
+                span {
+                    font-size: 14px;
+                }
+                .Tags {
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    .Tag {
+                        min-width: 84px;
+                        height: 18px;
+                        font-size: 10px;
+                        padding: 0 9px;
+                    }
+                }
+                
+            }
+            .Host_Rating {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                .Host {
+                    span {
+                        font-size: 12px;
+                    }
+                    img {
+                        height: 32px;
+                        width: 32px;
+                    }            
+                }        
+                .Rating {
+                    display: flex;
+                    gap: 4px;
+                    img {
+                        height: 13px;
+                        width: 13px;
+                    }                    
+                }
+            }
+        }   
+        .Dropdowns {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 13px;
+            padding-bottom: 27px;
+        }
+    }
+}

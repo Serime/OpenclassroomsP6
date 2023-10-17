@@ -4,18 +4,17 @@ import { useState } from 'react';
 
 function handleClick(toggle, setToggle) {
   (toggle ? setToggle(false) : setToggle(true)); 
-  /*
-  this.classList.toggle("active");
-  var content = this.nextElementSibling;
-  if (content.style.display === "block") {
-    content.style.display = "none";
-  } else {
-    content.style.display = "block";
-  }
-  */
 }
 
-function Dropdown({title, text}) {
+/**
+ * Composant affichant un boutton avec un titre.
+ * Lors de l'activation du button le composant affiche un text et/ou une liste en dessous du boutton avec une animation de "collapse"
+ *
+ * @title :string Définit le titre du boutton
+ * @text :string ? Définit le texte à afficher lors du collapse
+ * @list :string[] ? Définit la liste à afficher lors du collapse avec un retour à la ligne entre les éléments
+ */
+function Dropdown({title, text = null, list = null}) {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -24,8 +23,17 @@ function Dropdown({title, text}) {
         <span>{title}</span>
         <img className="arrow" src={arrow} alt="arrow"/>
       </button>
-      <div class="content">
-        <p>{text}</p>
+      <div className="content">
+        {(text && <p>{text}</p>)}
+        {list && 
+        <ul>
+          {list.map((equipment) => {  
+            return (
+              <li key={equipment}>{equipment}</li>
+            )
+          })}          
+        </ul>
+        }
       </div>
     </div>
   );

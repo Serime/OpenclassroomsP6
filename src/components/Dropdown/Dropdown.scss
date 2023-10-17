@@ -1,6 +1,5 @@
-.Dropdown {
-  background-color: #F6F6F6;
-  border-radius: 5px;
+.Dropdown {    
+  border-radius: 5px;  
   button {
     background-color: #FF6060;
     height: 52px;
@@ -22,23 +21,30 @@
     }      
   }
   .content {
-    padding: 0 15px;
+    background-color: #F6F6F6;
     color: #FF6060;
-    font-size: 18px;
-
+    padding: 0 15px;
+    font-size: 18px;    
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.7s;
+    white-space: pre-line;
+    ul {
+      padding: 0;
+      li{
+        list-style-type:none;
+      }    
+    }    
   }
-  .active + .content {
-    max-height: 150px;
+  .active + .content {       
+    max-height: 200px;
   }  
   .active .arrow {
     transform: rotate(-180deg);    
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .Dropdown {  
       button {
         height: 30px;

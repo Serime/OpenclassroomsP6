@@ -6,12 +6,12 @@
   align-items: center; 
   gap: 139px;
   padding: 139px 0px;
-  span {
+  h1 {
+    margin: 0;
     font-size: 288px;
     font-weight: 700;
-    height: 263px;
   }
-  span + span {
+  span {
     font-size: 36px;
     height: 51px;
   }
@@ -23,16 +23,18 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .Page404 {    
     gap: 113px;
     padding: 113px 0px;
-    span {
+    h1 {
       font-size: 96px;
       font-weight: 700;
     }
-    span + span {
+    span {
       font-size: 18px;
+      padding: 0 50px;
+      text-align: center;
     }
     a {
       font-size: 14px;

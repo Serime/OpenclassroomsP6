@@ -1,4 +1,5 @@
 .About {
+    padding-top: 38px;
     section {
         display: flex;
         flex-direction: column;
@@ -7,7 +8,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .About {  
         section {
             padding: 19px 0;

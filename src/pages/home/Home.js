@@ -1,8 +1,11 @@
 import './Home.scss';
 import { useEffect, useState } from 'react';
-import Banner from '../../components/banner/Banner';
-import Card from '../../components/card/Card';
+import Banner from '../../components/Banner/Banner';
+import Card from '../../components/Card/Card';
 
+/**
+ * Page "Accueil" comprenant une `<Banner>` et les `<Card>` des locations
+ */
 function Home() {
   const [data, setData] = useState(0);
 
@@ -18,19 +21,15 @@ function Home() {
         <Banner />
       </main>
     );
-
   }
-
-  let span = <span>Chez vous, <br className='only-mobile'/> partout et ailleurs</span> 
   
   return (
     <main className="Home">
-      <Banner image="banner_1.png" span={span} alt="Falaise en bord de mer"/>
+      <Banner image="banner_1.png" text="Chez vous, partout et ailleurs" alt="Falaise en bord de mer"/>
       <section className='LocationCards'>
-      {data.map((location) => {  
-        //console.log(location);
+      {data.map((location) => { 
         return (
-          <Card key={location.id} title={location.title} cover={location.cover}/>
+          <Card key={location.id} id={location.id} title={location.title} cover={location.cover}/>
         )
       })}    
       </section>  
