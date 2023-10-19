@@ -8,7 +8,6 @@ import Page404 from './pages/404/Page404';
 import Housing from './pages/Housing/Housing';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,8 +24,3 @@ root.render(
     </Router>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

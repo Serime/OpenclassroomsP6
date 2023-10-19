@@ -24,8 +24,7 @@ function Housing() {
     .then((text) => {
       setHousingData("errorBackend");
         text.forEach(element => {
-          if (element.id === id)
-          {
+          if (element.id === id) {
             setHousingData(element);
           }
         });
@@ -56,14 +55,14 @@ function Housing() {
           <div className='Host_Rating'>      
             <div className='Host'>  
               <span>{housingData.host.name}</span>
-              <img src={housingData.host.picture} height={64} width={64} alt={housingData.host.name} />
+              <img src={housingData.host.picture} height={64} width={64} alt={housingData.host.name}/>
             </div>     
             <div className='Rating'>
-              <img src={(housingData.rating >= 1) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} />
-              <img src={(housingData.rating >= 2) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} />
-              <img src={(housingData.rating >= 3) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} />
-              <img src={(housingData.rating >= 4) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} />
-              <img src={(housingData.rating >= 5) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} />
+              <img src={(housingData.rating >= 1) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"}/>
+              <img src={(housingData.rating >= 2) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
+              <img src={(housingData.rating >= 3) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
+              <img src={(housingData.rating >= 4) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
+              <img src={(housingData.rating >= 5) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
             </div>
           </div>
         </section>

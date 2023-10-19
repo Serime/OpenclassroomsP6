@@ -2,10 +2,6 @@ import './Dropdown.scss';
 import arrow from './../../arrow.svg';
 import { useState } from 'react';
 
-function handleClick(toggle, setToggle) {
-  (toggle ? setToggle(false) : setToggle(true)); 
-}
-
 /**
  * Composant affichant un boutton avec un titre.
  * Lors de l'activation du button le composant affiche un text et/ou une liste en dessous du boutton avec une animation de "collapse"
@@ -19,9 +15,9 @@ function Dropdown({title, text = null, list = null}) {
 
   return (
     <div className='Dropdown'>
-      <button type="button" className={(toggle ? "active" : "")} onClick={() => handleClick(toggle, setToggle)}>
+      <button type="button" className={(toggle ? "active" : "")} onClick={() => setToggle(!toggle)} aria-pressed={toggle}>
         <span>{title}</span>
-        <img className="arrow" src={arrow} alt="arrow"/>
+        <img className="arrow" src={arrow} alt={(toggle) ? "Fermer" : "Ouvrir"} aria-hidden="true"/>
       </button>
       <div className="content">
         {(text && <p>{text}</p>)}
