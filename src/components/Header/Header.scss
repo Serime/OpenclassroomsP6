@@ -15,7 +15,10 @@ header {
       color: $base-color;
       &:hover {
         text-decoration: underline;
-      }
+      }       
+    }
+    .Underline {
+      text-decoration: underline;
     }
   }
 }

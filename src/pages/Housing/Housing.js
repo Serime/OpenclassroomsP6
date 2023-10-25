@@ -1,11 +1,9 @@
-
-import star from './../../star.svg';
-import star_false from './../../star_false.svg';
 import './Housing.scss';
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Dropdown from '../../components/Dropdown/Dropdown';
 import Carousel from '../../components/Carousel/Carousel';
+import Rating from '../../components/Rating/Rating';
 
 /**
  * Page affichant le logement avec id correspondant
@@ -57,13 +55,7 @@ function Housing() {
               <span>{housingData.host.name}</span>
               <img src={housingData.host.picture} height={64} width={64} alt={housingData.host.name}/>
             </div>     
-            <div className='Rating'>
-              <img src={(housingData.rating >= 1) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"}/>
-              <img src={(housingData.rating >= 2) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
-              <img src={(housingData.rating >= 3) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
-              <img src={(housingData.rating >= 4) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
-              <img src={(housingData.rating >= 5) ? star : star_false} height={24} width={24} alt={"Note de " + housingData.rating + " sur 5"} aria-hidden="true"/>
-            </div>
+            <Rating rating={housingData.rating}/>            
           </div>
         </section>
         <section className='Dropdowns'>

@@ -58,13 +58,7 @@ function Carousel({ images }) {
   };
 
   return (
-    (numberImages === 1) ? 
-    <div className='Carousel' style={StyleCarousel}>
-      <div className="Slide" style={StyleSlide}> 
-        <img src={images[0]} height={415} alt={"Logement"}/>
-      </div>
-    </div>
-    :
+    (numberImages !== 1) ? 
     <div className='Carousel' style={StyleCarousel}>
         <div className="Slide" style={StyleSlide}> 
           <img src={images[numberImages - 1]} height={415} alt={"Photo numéro " + numberImages + " du logement"}/>
@@ -86,6 +80,12 @@ function Carousel({ images }) {
         </div>            
       </div> 
     </div>
+    :
+    <div className='Carousel' style={StyleCarousel}>
+      <div className="Slide" style={StyleSlide}> 
+        <img src={images[0]} height={415} alt={"Logement"}/>
+      </div>
+    </div>    
   );
 }
 

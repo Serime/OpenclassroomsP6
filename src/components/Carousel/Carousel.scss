@@ -61,6 +61,11 @@
 @media (max-width: 1280px) {
   .Carousel {  
     margin-top: 27px;
+    .Slide { 
+      span {
+          display: none;
+      }        
+    } 
     .Arrows {
       height: 335px;
       width: calc(100% - 40px);

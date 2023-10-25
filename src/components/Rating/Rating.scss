@@ -1,0 +1,15 @@
+.Rating {
+  display: flex;
+  gap: 10px;
+}
+
+
+@media (max-width: 1280px) {
+  .Rating {
+    gap: 4px;
+    img {
+        height: 13px;
+        width: 13px;
+    }                    
+  }
+}
